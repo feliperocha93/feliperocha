@@ -1,28 +1,12 @@
+import { getDifferenceBetweenMonths, getFormattedDate } from '@/utils/date';
+
 export default function Home() {
-  function getFormattedDate(year?: number, month?: number) {
-    const date =
-      typeof year === 'number' && typeof month === 'number'
-        ? new Date(year, month)
-        : new Date();
-
-    return date.toLocaleString('en-US', {
-      month: 'short',
-      year: 'numeric',
-    });
-  }
-
-  const MONTH_MILISECONDS = 1000 * 60 * 60 * 24 * 30;
-
-  function getDifferenceBetweenMonths(olderDate: Date, newerDate: Date) {
-    const differenceInMilliseconds = Math.abs(
-      newerDate.getTime() - olderDate.getTime()
-    );
-
-    return Math.floor(differenceInMilliseconds / MONTH_MILISECONDS);
-  }
-
   return (
-    <main className='container p-12'>
+    <main
+      className='container p-12
+      bg-slate-100 dark:bg-gray-600
+      text-gray-700 dark:text-white'
+    >
       <h1 className='font-bold text-4xl leading-snug'>
         Hello World! 👋🏻
         <br /> My name is Felipe Rocha and I am a Software Engineer.
