@@ -3,11 +3,19 @@ import './styles.css';
 interface ToggleProps {
   checked: boolean;
   onToggle: (checked: boolean) => void;
-  text?: string;
+  textOnLeft?: string;
+  textOnRight?: string;
 }
-export function Toggle({ checked, onToggle, text }: ToggleProps) {
+export function Toggle({
+  checked,
+  onToggle,
+  textOnLeft,
+  textOnRight,
+}: ToggleProps) {
   return (
     <label htmlFor='toogle' className='flex items-center cursor-pointer'>
+      {textOnLeft && <span className='mr-2 text-xs'>{textOnLeft}</span>}
+
       <div className='relative'>
         <input
           id='toogle'
@@ -22,7 +30,7 @@ export function Toggle({ checked, onToggle, text }: ToggleProps) {
         <div className='dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition'></div>
       </div>
 
-      {text && <div className='ml-3 text-gray-700 font-medium'>{text}</div>}
+      {textOnRight && <span className='ml-2 text-xs'>{textOnRight}</span>}
     </label>
   );
 }

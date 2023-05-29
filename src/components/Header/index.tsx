@@ -12,19 +12,19 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
   const { changeTheme, isDarkTheme } = useTheme({ hasDarkModeCookie });
 
   return (
-    <header className='p-5 flex justify-between bg-slate-100 dark:bg-slate-700'>
+    <header
+      className='p-5 flex justify-between items-center
+      bg-slate-100 dark:bg-slate-700 
+      text-gray-700 dark:text-white'
+    >
       <span className='font-bold text-black dark:text-white'>
         Felipe Rocha.
       </span>
 
-      <nav>
+      <nav className='text-xs'>
         <ul className='flex'>
           <li>
-            <button onClick={() => alert('Olá')}>PT-BR</button>
-          </li>
-          <span className='mx-2'>|</span>
-          <li>
-            <button>EN-US</button>
+            <button>en-US 🇺🇸</button>
           </li>
         </ul>
       </nav>
@@ -32,6 +32,8 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
       <Toggle
         onToggle={(checked) => changeTheme(checked ? Theme.DARK : Theme.LIGHT)}
         checked={isDarkTheme}
+        textOnLeft={Theme.LIGHT}
+        textOnRight={Theme.DARK}
       />
     </header>
   );
