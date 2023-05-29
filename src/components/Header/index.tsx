@@ -13,8 +13,8 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
 
   return (
     <header
-      className='p-5 flex justify-between items-center
-      bg-slate-100 dark:bg-slate-700 
+      className='container p-5 flex justify-between items-center
+      bg-slate-200 dark:bg-gray-700 
       text-gray-700 dark:text-white'
     >
       <span className='font-bold text-black dark:text-white'>
