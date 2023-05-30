@@ -6,8 +6,8 @@
 
 import { Toggle } from '@/components/Toggle/index';
 import { useTheme } from '@/hooks/useTheme';
-import { Moon } from '@/icons/Moon';
-import { Sun } from '@/icons/Sun';
+import { Moon, Sun } from 'react-bootstrap-icons';
+
 import { Theme } from '@/types/Theme';
 
 interface HeaderProps {
@@ -39,8 +39,8 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
       <Toggle
         onToggle={(checked) => changeTheme(checked ? Theme.DARK : Theme.LIGHT)}
         checked={isDarkTheme}
-        textOnLeft={<Sun />}
-        textOnRight={<Moon />}
+        textOnLeft={<Sun className='w-4 h-4' />}
+        textOnRight={<Moon className='w-4 h-4' />}
       />
     </header>
   );

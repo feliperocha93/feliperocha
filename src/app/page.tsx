@@ -1,9 +1,17 @@
+// TODO: Create css for heading 1~3
+// TODO: Create a career section w/ career item
+// TODO: Insert correct text values
+// TODO: Fix desktop layout
+/** Deploy */
+// TODO: Install react-intl and use messages instead text
+// TODO: Create portuguese Version
+
 import { getDifferenceBetweenMonths, getFormattedDate } from '@/utils/date';
 
 export default function Home() {
   return (
     <main
-      className='container p-12
+      className='container px-8 py-12
       bg-slate-100 dark:bg-gray-600
       text-gray-700 dark:text-white'
     >
