@@ -3,8 +3,8 @@ import './styles.css';
 interface ToggleProps {
   checked: boolean;
   onToggle: (checked: boolean) => void;
-  textOnLeft?: string;
-  textOnRight?: string;
+  textOnLeft?: string | JSX.Element;
+  textOnRight?: string | JSX.Element;
 }
 export function Toggle({
   checked,

@@ -1,4 +1,3 @@
-// TODO: use icons instead light/dark
 // TODO: Fix desktop layout
 /** Deploy */
 // TODO: install button do change locale
@@ -7,6 +6,8 @@
 
 import { Toggle } from '@/components/Toggle/index';
 import { useTheme } from '@/hooks/useTheme';
+import { Moon } from '@/icons/Moon';
+import { Sun } from '@/icons/Sun';
 import { Theme } from '@/types/Theme';
 
 interface HeaderProps {
@@ -38,8 +39,8 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
       <Toggle
         onToggle={(checked) => changeTheme(checked ? Theme.DARK : Theme.LIGHT)}
         checked={isDarkTheme}
-        textOnLeft={Theme.LIGHT}
-        textOnRight={Theme.DARK}
+        textOnLeft={<Sun />}
+        textOnRight={<Moon />}
       />
     </header>
   );
