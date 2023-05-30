@@ -1,3 +1,8 @@
+// TODO: use icons instead light/dark
+// TODO: Fix desktop layout
+/** Deploy */
+// TODO: install button do change locale
+// TODO: install logic do change locale
 'use client';
 
 import { Toggle } from '@/components/Toggle/index';
@@ -17,9 +22,10 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
       bg-slate-200 dark:bg-gray-700 
       text-gray-700 dark:text-white'
     >
-      <span className='font-bold text-black dark:text-white'>
-        Felipe Rocha.
-      </span>
+      <div className='font-bold text-xl'>
+        <span className='hidden sm:inline-block'>Felipe Rocha</span>
+        <span className='sm:hidden'>F</span>.
+      </div>
 
       <nav className='text-xs'>
         <ul className='flex'>
