@@ -6,9 +6,8 @@
 
 import { Toggle } from '@/components/Toggle/index';
 import { useTheme } from '@/hooks/useTheme';
-import { Moon, Sun } from 'react-bootstrap-icons';
-
 import { Theme } from '@/types/Theme';
+import { Moon, Sun } from 'react-bootstrap-icons';
 
 interface HeaderProps {
   hasDarkModeCookie?: boolean;
@@ -19,7 +18,7 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
 
   return (
     <header
-      className='container p-5 flex justify-between items-center
+      className='p-5 flex justify-between items-center
       bg-slate-200 dark:bg-gray-700 
       text-gray-700 dark:text-white'
     >

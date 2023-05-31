@@ -1,10 +1,11 @@
+import { ReactNode } from 'react';
 import './styles.css';
 
 interface ToggleProps {
   checked: boolean;
   onToggle: (checked: boolean) => void;
-  textOnLeft?: string | JSX.Element;
-  textOnRight?: string | JSX.Element;
+  textOnLeft?: string | ReactNode;
+  textOnRight?: string | ReactNode;
 }
 export function Toggle({
   checked,
