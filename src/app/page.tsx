@@ -1,4 +1,6 @@
-// TODO: Fix desktop layout
+/**
+ * colors (figma => blue)
+ */
 /** Deploy */
 // TODO: Install react-intl and use messages instead text
 // TODO: Create portuguese Version
@@ -10,13 +12,14 @@ import { Title } from '@/containers/Home/Title';
 export default function Home() {
   return (
     <main
-      className='px-8 py-12
-      bg-slate-100 dark:bg-gray-600
+      className='bg-slate-100 dark:bg-gray-600
       text-gray-700 dark:text-white'
     >
-      <Title />
-      <Summary />
-      <Career />
+      <div className='container mx-auto px-8 sm:px-0 py-12 max-w-2xl'>
+        <Title />
+        <Summary />
+        <Career />
+      </div>
     </main>
   );
 }

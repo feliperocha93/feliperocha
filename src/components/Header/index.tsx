@@ -1,5 +1,3 @@
-// TODO: Fix desktop layout
-/** Deploy */
 // TODO: install button do change locale
 // TODO: install logic do change locale
 'use client';
@@ -18,29 +16,35 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
 
   return (
     <header
-      className='p-5 flex justify-between items-center
-      bg-slate-200 dark:bg-gray-700 
+      className='bg-slate-200 dark:bg-gray-700 
       text-gray-700 dark:text-white'
     >
-      <div className='font-bold text-xl'>
-        <span className='hidden sm:inline-block'>Felipe Rocha</span>
-        <span className='sm:hidden'>F</span>.
+      <div
+        className='container mx-auto px-5 py-5
+        flex justify-between items-center'
+      >
+        <div className='font-bold text-2xl lg:text-3xl'>
+          <span className='hidden sm:inline-block'>Felipe Rocha</span>
+          <span className='sm:hidden'>F</span>.
+        </div>
+
+        <nav className='text-sm lg:text-lg'>
+          <ul className='flex'>
+            <li>
+              <button className='hover:underline'>en-US 🇺🇸</button>
+            </li>
+          </ul>
+        </nav>
+
+        <Toggle
+          onToggle={(checked) =>
+            changeTheme(checked ? Theme.DARK : Theme.LIGHT)
+          }
+          checked={isDarkTheme}
+          textOnLeft={<Sun className='w-4 h-4 lg:w-5 lg:h-5' />}
+          textOnRight={<Moon className='w-4 h-4 lg:w-5 lg:h-5' />}
+        />
       </div>
-
-      <nav className='text-xs'>
-        <ul className='flex'>
-          <li>
-            <button>en-US 🇺🇸</button>
-          </li>
-        </ul>
-      </nav>
-
-      <Toggle
-        onToggle={(checked) => changeTheme(checked ? Theme.DARK : Theme.LIGHT)}
-        checked={isDarkTheme}
-        textOnLeft={<Sun className='w-4 h-4' />}
-        textOnRight={<Moon className='w-4 h-4' />}
-      />
     </header>
   );
 }

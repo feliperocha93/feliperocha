@@ -7,7 +7,10 @@ interface FooterLinksProps {
 
 export function FooterLinks({ links }: FooterLinksProps) {
   return (
-    <ul className='container my-8 flex justify-between items-center'>
+    <ul
+      className='my-8 mx-auto max-w-xl
+      flex justify-between items-center lg:text-lg'
+    >
       {links.map(({ src, icon, text }) => (
         <Link key={text} src={src} icon={icon} text={text} />
       ))}

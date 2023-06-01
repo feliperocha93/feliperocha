@@ -8,7 +8,7 @@ export function Summary() {
   return (
     <section className='my-8'>
       {paragraphs.map((p) => (
-        <p key={p.substring(0, 4)} className='my-4'>
+        <p key={p.substring(0, 4)} className='my-4 text-2xl lg:text'>
           {p}
         </p>
       ))}

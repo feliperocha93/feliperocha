@@ -24,6 +24,7 @@ const jobs: CareerItemProps[] = [
   },
 ];
 
+// TODO: Create a file to CareerItem Component
 function CareerItem({
   title,
   text,
@@ -41,11 +42,11 @@ function CareerItem({
 
   return (
     <article className='my-4'>
-      <h3 className='my-1 font-bold text-lg'>{title}</h3>
-      <p className='text-sm'>{text}</p>
-      <footer className='my-1 text-xs'>
+      <h3 className='my-1 font-bold text-lg lg:text-xl'>{title}</h3>
+      <p className='lg:text-lg'>{text}</p>
+      <footer className='my-1 text-sm lg:text-base'>
         <p>
-          <b>Stack:</b> {stack.map((i) => i)}
+          <b>Stack:</b> {stack.join(', ')}.
         </p>
         <span>{dates}</span>
       </footer>
@@ -56,7 +57,9 @@ function CareerItem({
 export function Career() {
   return (
     <section className='my-8'>
-      <h2 className='font-bold text-3xl leading-snug'>Career</h2>
+      <h2 className='font-bold text-4xl leading-snug lg:text-5xl lg:leading-tight'>
+        Career
+      </h2>
       {jobs.map(({ title, text, stack, startedIn, endedIn }) => (
         <CareerItem
           title={title}
