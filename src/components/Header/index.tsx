@@ -16,8 +16,9 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
 
   return (
     <header
-      className='bg-slate-200 dark:bg-gray-700 
-      text-gray-700 dark:text-white'
+      className='bg-white-200 dark:bg-black-500
+      dark:border-b-2 border-solid border-white-500
+      text-black-500 dark:text-white-100'
     >
       <div
         className='container mx-auto px-5 py-5

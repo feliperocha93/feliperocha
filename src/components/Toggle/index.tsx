@@ -26,9 +26,9 @@ export function Toggle({
           onChange={(e) => onToggle(e.target.checked)}
         />
 
-        <div className='w-10 h-4 bg-slate-100 dark:bg-gray-600 rounded-full shadow-inner'></div>
+        <div className='w-10 h-4 bg-white-100 dark:bg-white-500 rounded-full shadow-inner'></div>
 
-        <div className='dot absolute w-6 h-6 bg-slate-100 rounded-full shadow -left-1 -top-1 transition'></div>
+        <div className='dot absolute w-6 h-6 bg-white-100 rounded-full shadow -left-1 -top-1 transition'></div>
       </div>
 
       {textOnRight && <span className='ml-2 text-xs'>{textOnRight}</span>}
