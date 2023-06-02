@@ -5,7 +5,6 @@ import { Theme } from '@/types/Theme';
 import type { Metadata } from 'next';
 import { cookies } from 'next/dist/client/components/headers';
 import { Inter } from 'next/font/google';
-
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -17,13 +16,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { lang },
 }: {
   children: React.ReactNode;
+  params: { lang: string };
 }) {
   const hasDarkModeCookie = cookies().get('theme')?.value === Theme.DARK;
 
   return (
-    <html lang='en' className={hasDarkModeCookie ? Theme.DARK : undefined}>
+    <html lang={lang} className={hasDarkModeCookie ? Theme.DARK : undefined}>
       <body className={inter.className}>
         <Header hasDarkModeCookie={hasDarkModeCookie} />
         {children}

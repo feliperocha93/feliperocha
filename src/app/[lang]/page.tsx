@@ -1,6 +1,18 @@
-/** Deploy */
-// TODO: Install react-intl and use messages instead text
-// TODO: Create portuguese Version
+//TODO: Deploy
+/**
+ * I need rebuild package-lock.json in my own OS
+ */
+//TODO: Docker
+/**
+ * Create a docker image and push it to docker hub;
+ * Trying run the application locally in a container;
+ * Trying create a pipeline;
+ */
+//TODO: i18n
+/**
+ * Create a pt-BR version;
+ * save a cookie always user changes language;
+ */
 
 import { Career } from '@/containers/Home/Career';
 import { Summary } from '@/containers/Home/Summary';
