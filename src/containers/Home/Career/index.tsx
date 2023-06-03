@@ -1,3 +1,4 @@
+import { generateKey } from '@/utils/key';
 import { CareerItem } from './CarrerItem';
 import { jobs } from './data';
 
@@ -14,7 +15,7 @@ export function Career() {
           stack={stack}
           startedIn={startedIn}
           endedIn={endedIn}
-          key={title}
+          key={generateKey(title)}
         />
       ))}
     </section>
