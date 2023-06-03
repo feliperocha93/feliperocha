@@ -1,5 +1,27 @@
 {
-  "Home": {
-    "title": "Olá! 👋🏻 Eu sou o Felipe Rocha, um Engenheiro de Software."
+  "home": {
+    "title": "Olá! 👋🏻 Eu sou o Felipe Rocha, um Engenheiro de Software.",
+    "summary": {
+      "p1": "Formado em Análise e Desenvolvimento de Software, atuo profissionalmente desde 2019. Comecei como estagiário de front-end em uma agência de marketing, trabalhei dois anos em um consultoria e hoje faço parte do time de engenharia de uma BigTech brasileira.",
+      "p2": "Para mim, os principais valores que adquiri durantes esses anos foram: refazer custa mais do que fazer direito, desbloquar os colegas de equipe é prioridade, a constância é mais importante que a velocidade, divida o que é grande em pedaços menores, sempre seja transparente.",
+      "p3": "Hoje minha prioridade é trabalhar em um ambiente saudável, que proporcione condições para eu continuar meu desenvolvimento pessoal e profissional.",
+      "p4": "Minha linguagem de programação principal é o JavaScript, mas também me sinto confortável e sei da importância de estar preparado para trabalhar com qualquer uma. Me considero um profissional 't-shaped' que tem como conhecimento especifíco front-end. Nos próximos meses, pretendo melhorar minha visão de cloud e infraestrutura."
+    },
+    "career": {
+      "title": "Experiências",
+      "quintoandar": {
+        "title": "Engenheiro de Software - QuintoAndar",
+        "text": "Otimização para SEO nos pwas, o que inclui atividades como melhoria de performance voltada para core web vitals, features e experimentos de pesquisa aprimorada (Rich Result), correções/oportunidades apontadas no Search Console, SEO semântico e acessibilidade. O principal desafio é trabalhar em uma aplicação escrita há muitos ano e que dezenas de engenheiros trabalham diariamente."
+      },
+      "iteris": {
+        "title": "Desenvolvedor de Software - Iteris",
+        "text": "Desenvolvimento de software sob medida para terceiros, atuando a maior parte do tempo no front-end. Os principais desafios eram a integração com API já existentes e lidar com os clientes da areá de negócios."
+      },
+      "foster": {
+        "title": "Estágiário em Desenvolvimento de Software - Foster",
+        "text": "Responsável por tarefas cotidianas de uma agência de marketing. Costumava atualizar CMS, criar novas páginas e fazer layout de e-mail marketing."
+      },
+      "months": "meses"
+    }
   }
 }

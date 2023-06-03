@@ -1,5 +1,24 @@
 {
-  "Home": {
-    "title": "Welcome! 👋🏻 My name is Felipe Rocha and I am a Software Engineer."
+  "home": {
+    "title": "Welcome! 👋🏻 My name is Felipe Rocha and I am a Software Engineer.",
+    "summary": {
+      "p1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde nostrum placeat quos ullam error, beatae laborum fugit perspiciatis modi alias magni delectus voluptatem quaerat praesentium autem blanditiis maiores odio voluptates"
+    },
+    "career": {
+      "title": "Career",
+      "quintoandar": {
+        "title": "Software Engineer at QuintoAndar",
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde nostrum placeat quos ullam error, beatae laborum fugit perspiciatis modi alias magni delectus voluptatem quaerat praesentium autem blanditiis maiores odio voluptates"
+      },
+      "iteris": {
+        "title": "Software Developer at Iteris",
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde nostrum placeat quos ullam error, beatae laborum fugit perspiciatis modi alias magni delectus voluptatem quaerat praesentium autem blanditiis maiores odio voluptates"
+      },
+      "foster": {
+        "title": "Software Developer trainee at Iteris",
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde nostrum placeat quos ullam error, beatae laborum fugit perspiciatis modi alias magni delectus voluptatem quaerat praesentium autem blanditiis maiores odio voluptates"
+      },
+      "months": "months"
+    }
   }
 }

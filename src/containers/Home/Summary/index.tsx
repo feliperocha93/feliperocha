@@ -1,17 +1,15 @@
 import { generateKey } from '@/utils/key';
+import { useTranslations } from 'next-intl';
 
 export function Summary() {
-  const paragraphs = [
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui id, corrupti eligendi fugit ex rem officia est corporis reprehenderit iusto omnis labore, dolorem incidunt nostrum magni nesciunt error modi sapiente.',
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui id, corrupti eligendi fugit ex rem officia est corporis reprehenderit iusto omnis labore, dolorem incidunt nostrum magni nesciunt error modi sapiente.',
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui id, corrupti eligendi fugit ex rem officia est corporis reprehenderit iusto omnis labore, dolorem incidunt nostrum magni nesciunt error modi sapiente.',
-  ];
+  const t = useTranslations('home.summary');
+  const paragraphs = ['p1'];
 
   return (
     <section className='my-8'>
       {paragraphs.map((p) => (
-        <p key={generateKey(p)} className='my-4 text-2xl lg:text'>
-          {p}
+        <p key={p} className='my-4 text-xl lg:text-2xl'>
+          {t(p)}
         </p>
       ))}
     </section>
