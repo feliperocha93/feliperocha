@@ -1,5 +1,3 @@
-// TODO: install button do change locale
-// TODO: install logic do change locale
 'use client';
 
 import { Toggle } from '@/components/Toggle/index';

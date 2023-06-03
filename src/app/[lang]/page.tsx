@@ -10,7 +10,7 @@
  */
 //TODO: i18n
 /**
- * Create a pt-BR version;
+ * Create a en-US version;
  * save a cookie always user changes language;
  */
 
