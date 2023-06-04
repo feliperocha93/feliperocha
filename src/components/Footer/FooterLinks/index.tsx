@@ -1,5 +1,6 @@
 import { Link } from '@/components/Link';
 import { LinkProps } from '@/types/Footer';
+import { generateKey } from '@/utils/key';
 
 interface FooterLinksProps {
   links: LinkProps[];
@@ -12,7 +13,12 @@ export function FooterLinks({ links }: FooterLinksProps) {
       flex justify-between items-center lg:text-lg'
     >
       {links.map(({ src, icon, text }) => (
-        <Link key={text} src={src} icon={icon} text={text} />
+        <Link
+          key={generateKey(src.slice(8))}
+          src={src}
+          icon={icon}
+          text={text}
+        />
       ))}
     </ul>
   );
