@@ -1,7 +1,3 @@
-//TODO: Deploy
-/**
- * I need rebuild package-lock.json in my own OS
- */
 //TODO: Docker
 /**
  * Create a docker image and push it to docker hub;
@@ -11,7 +7,6 @@
 //TODO: i18n
 /**
  * Create a en-US version;
- * save a cookie always user changes language;
  */
 
 import { Career } from '@/containers/Home/Career';

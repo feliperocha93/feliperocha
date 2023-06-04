@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { cookies } from 'next/dist/client/components/headers';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { NextIntlClientProvider } from 'next-intl';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang={lang} className={hasDarkModeCookie ? Theme.DARK : undefined}>
       <body className={inter.className}>
-        <Header hasDarkModeCookie={hasDarkModeCookie} />
-        {children}
-        <Footer />
+        <NextIntlClientProvider locale={lang}>
+          <Header hasDarkModeCookie={hasDarkModeCookie} />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

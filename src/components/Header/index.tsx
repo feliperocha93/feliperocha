@@ -3,6 +3,8 @@
 import { Toggle } from '@/components/Toggle/index';
 import { useTheme } from '@/hooks/useTheme';
 import { Theme } from '@/types/Theme';
+import { useLocale } from 'next-intl';
+import Link from 'next/link';
 import { Moon, Sun } from 'react-bootstrap-icons';
 
 interface HeaderProps {
@@ -10,6 +12,7 @@ interface HeaderProps {
 }
 
 export function Header({ hasDarkModeCookie = false }: HeaderProps) {
+  const locale = useLocale();
   const { changeTheme, isDarkTheme } = useTheme({ hasDarkModeCookie });
 
   return (
@@ -28,9 +31,25 @@ export function Header({ hasDarkModeCookie = false }: HeaderProps) {
         </div>
 
         <nav className='text-sm lg:text-lg'>
-          <ul className='flex'>
+          <ul className='flex gap-x-2'>
             <li>
-              <button className='hover:underline'>en-US 🇺🇸</button>
+              <Link
+                href='/en'
+                locale={false}
+                className={locale === 'en' ? 'underline' : 'hover:underline'}
+              >
+                en-US 🇺🇸
+              </Link>
+            </li>
+            |
+            <li>
+              <Link
+                href='/pt'
+                locale={false}
+                className={locale === 'pt' ? 'underline' : 'hover:underline'}
+              >
+                pt-BR 🇧🇷
+              </Link>
             </li>
           </ul>
         </nav>
